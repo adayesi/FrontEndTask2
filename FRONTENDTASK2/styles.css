@@ -1,0 +1,208 @@
+body{
+    background: #000000;
+    font-family: "Poppins", "sans-serif";
+    margin: 100px; 
+}
+
+a{
+    text-decoration: none;
+}
+   
+.dark-green-box{
+    grid-row: 1;
+    grid-area: dGa;
+    background-color: #002200;
+    color: white;
+}
+.light-green-box{
+    grid-area: lGa;
+    background-color:#44AA00;
+    color: white;
+}
+.dark-blue-box{
+    grid-area: dBa;
+    background-color:#004488;
+    color: white;
+}
+.light-blue-box{
+    grid-area: lBa;
+    background-color:#226688;
+    color: white;
+}
+.dark-purple-box{
+    grid-area: dPa;
+    background-color:#660044;
+    color: white;
+}
+.light-purple-box{
+    grid-area: lPa;
+    background-color:#DD22AA;
+    color: white;
+}
+.red-box{
+    grid-area: ra;
+    background-color:#880000;
+    color: white;
+}
+.brown-box{
+    grid-area: ba;
+    background-color: #884400;
+    color: white;
+}
+.transparent-block{
+    grid-area: ta;
+    background-color: black;
+    color: transparent;
+
+}
+
+.transparent-bl{
+    grid-area: tb;
+    background-color: black;
+    color: white;
+
+}
+.periodic-table{
+    display: grid;
+    grid-template-areas: "ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta"   
+                         "ta dGa ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta lGa"
+                         "ta dPa dBa ta ta ta ta ta ta ta ta ta ta ba dGa dGa dGa lBa lGa"
+                         "ta dPa dBa ta ta ta ta ta ta ta ta ta ta lPa ba dGa dGa lBa lGa"
+                         "ta dPa dBa ra ra ra ra ra ra ra ra ra ra lPa ba ba dGa lBa lGa"
+                         "ta dPa dBa ra ra ra ra ra ra ra ra ra ra lPa lPa ba ba lBa lGa"
+                         "ta dPa dBa tb ra ra ra ra ra ra ra ra ra lPa lPa lPa ba lBa lGa"
+                         "ta dPa dBa tb ra ra ra ra ra ra ra ra ra lPa lPa lPa lPa lBa lGa";
+    
+    grid-template-columns: repeat(19, 50px);
+    grid-template-rows: repeat(8, 50px); 
+    row-gap: 10px;
+    column-gap: 10px;
+    margin:auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.periodic-element{
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.periodic-element .periodic-element-inner{
+    
+    padding: 10px 15px;
+    width: calc(100% - 30%);
+    height: calc(100% - 20%);
+    transition: inherit;
+}
+
+.periodic-element .title{
+    font: 700 26.1538px"Poppins", sans-serif;
+    margin: 0.3em 0 0;
+    transition: 0.8s ease 600ms;
+}
+
+.periodic-element .desc{
+     font: 500 12px"Poppins", sans-serif;
+     margin-top: -0.2em ;
+}
+
+.periodic-element:hover{
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.periodic-element:hover .periodic-element-inner{
+    background: transparent;
+}
+
+.periodic-element:hover .title, .periodic-element:hover .desc{
+     -webkit-text-fill-color: yellow;
+}
+
+.periodic-element:hover:after{
+    top: 105%;
+    opacity: 1;
+}
+
+.periodic-element{
+    cursor: pointer;
+} 
+
+/* .one{
+    background: linear-gradient(to bottom right, #f3f9a6 0%, #cbc634 100%);
+}
+
+/* .one .title, .one .desc{
+    background: -webkit-linear-gradient(#f3f9a6, #cbc634);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .four{
+    background: linear-gradient(to bottom right, #fa7f72 0%, #ffc171 100%);
+} */
+
+/* .four .title, .four .desc{
+    background: -webkit-linear-gradient(#fa7f72, #ffc171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .two{
+    background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
+} */
+
+/* .two .title, .two .desc{
+    background: -webkit-linear-gradient(#37cfdc, #5a88e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .three{
+    background: linear-gradient(to bottom right, #58ac30 0%, #a7df62 100%);
+} */
+
+/* .three .title, .three .desc{
+    background: -webkit-linear-gradient(#58ac30, #a7df62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+ /* .empty-space-1{
+    grid-column: 1/span 16;
+    grid-row: 1;
+} 
+
+.empty-space-2{
+    grid-column: 3/span 10;
+    grid-row: 2;
+}
+
+.empty-space-3{
+    grid-column: 3/span 10;
+    grid-row: 3;
+}
+.empty-space-4{
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.empty-space-5{
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.empty-space-6{
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.empty-space-7{
+    grid-column: 3;
+    grid-row: 7;
+}
+
+ 
